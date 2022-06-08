@@ -1,0 +1,29 @@
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a.nav-active {
+  background: #140206;
+}
+
+h1 {
+  text-align: center;
+}
+
+* {
+  background: #2b108f;
+  font-family: monospace;
+  color: wheat;
+}
+
+@font-face {
+  font-family: "font-1";
+  src: url("./assets/Pacifico-Regular.ttf");
+}
+
+h1 {
+  font-family: "font-1";
+}
+/*# sourceMappingURL=index.css.map */
