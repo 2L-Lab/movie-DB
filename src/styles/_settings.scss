@@ -1,5 +1,4 @@
 * {
-  background: rgb(43, 16, 143);
   font-family: monospace;
   color: wheat;
 }
@@ -12,4 +11,7 @@
 $font-1: "font-1";
 h1 {
   font-family: $font-1;
+}
+body {
+  background: rgb(43, 16, 143);
 }

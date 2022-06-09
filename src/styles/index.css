@@ -12,8 +12,33 @@ h1 {
   text-align: center;
 }
 
+.result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  background: blue;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 15px;
+}
+
 * {
-  background: #2b108f;
   font-family: monospace;
   color: wheat;
 }
@@ -25,5 +50,9 @@ h1 {
 
 h1 {
   font-family: "font-1";
+}
+
+body {
+  background: #2b108f;
 }
 /*# sourceMappingURL=index.css.map */
