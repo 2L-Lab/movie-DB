@@ -5,7 +5,7 @@ const Favoris = () => {
   return (
     <div className="fav-content">
       <Header />
-      <h1>Mes coups de coeurs</h1>
+      <h3>Mes coups de coeurs</h3>
     </div>
   );
 };

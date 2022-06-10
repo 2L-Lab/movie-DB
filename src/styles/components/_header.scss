@@ -1,11 +1,19 @@
-.navigation {
-  display: flex;
+a {
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
 }
-
+a:visited {
+  color: rgb(20, 2, 6);
+}
 a.nav-active {
-  background: rgb(20, 2, 6);
+  background: rgb(113, 4, 216);
+  border-radius: 15px;
 }
 
 h1 {
   text-align: center;
+}
+.menu {
+  display: flex;
 }

@@ -6,7 +6,7 @@ const Header = () => {
     <div className="header">
       <h1>The Movie DB</h1>
       <div className="navigation">
-        <ul>
+        <ul className="menu">
           <NavLink
             to="/"
             className={(nav) => (nav.isActive ? "nav-active" : "")}

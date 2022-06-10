@@ -4,16 +4,16 @@ import Cards from "./Cards";
 
 const Form = () => {
   const [data, setData] = useState([]);
-
+  const [input, setInput] = useState("");
+  console.log(input);
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/search/movie?api_key=db352d55b86c0b82aa9e7389911a9992&query=ocean"
+        "https://api.themoviedb.org/3/search/movie?api_key=db352d55b86c0b82aa9e7389911a9992&query=" +
+          input
       )
       .then((res) => setData(res.data.results));
-  }, []);
-
-  console.log(data);
+  }, [input]);
 
   return (
     <div className="form">
@@ -23,23 +23,28 @@ const Form = () => {
             type="text"
             placeholder="Entrez le titre d'un film"
             id="search-input"
-            required
+            onChange={(e) => setInput(e.target.value)}
           />
-          <input type="submit" value="Recherchez"></input>
         </form>
         <div className="btn-sort-container">
           <div className="btn-sort" id="goodToBad">
-            top<span>&#8593;</span>
+            <button>
+              top<span>&#8593;</span>
+            </button>
           </div>
           <div className="btn-sort" id="badToGood">
-            flop<span>&#8595;</span>
+            <button>
+              flop<span>&#8595;</span>
+            </button>
           </div>
         </div>
       </div>
       <div className="result">
-        {data.map((movie) => (
-          <Cards key={movie.id} movie={movie} />
-        ))}
+        {data &&
+          data
+            .sort()
+            .slice(0, 12)
+            .map((movie) => <Cards key={movie.id} movie={movie} />)}
       </div>
     </div>
   );

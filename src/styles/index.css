@@ -1,15 +1,55 @@
-.navigation {
+a {
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+}
+
+a:visited {
+  color: #140206;
+}
+
+a.nav-active {
+  background: #7104d8;
+  border-radius: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-a.nav-active {
-  background: #140206;
+.form {
+  width: 100%;
 }
 
-h1 {
-  text-align: center;
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+}
+
+.btn-sort-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.btn-sort {
+  width: 100%;
 }
 
 .result {
@@ -31,16 +71,15 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 200px;
+  min-height: 400px;
   background: blue;
   border-radius: 15px;
   margin: 15px;
   padding: 15px;
-}
-
-* {
-  font-family: monospace;
-  color: wheat;
 }
 
 @font-face {
@@ -48,11 +87,17 @@ h1 {
   src: url("./assets/Pacifico-Regular.ttf");
 }
 
-h1 {
+h1,
+h3 {
   font-family: "font-1";
+  color: wheat;
 }
 
 body {
   background: #2b108f;
+}
+
+p {
+  font-size: 18px;
 }
 /*# sourceMappingURL=index.css.map */
