@@ -10,3 +10,19 @@
   margin: 15px;
   padding: 15px;
 }
+
+.btn {
+  background: #546fe4;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 0;
+  width: 150px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 50;
+  user-select: none;
+}
