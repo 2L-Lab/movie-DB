@@ -16,7 +16,7 @@ const Form = () => {
   }, [input]);
 
   return (
-    <div className="form">
+    <div className="form-component">
       <div className="form-container">
         <form>
           <input
@@ -28,14 +28,10 @@ const Form = () => {
         </form>
         <div className="btn-sort-container">
           <div className="btn-sort" id="goodToBad">
-            <button>
-              top<span>&#8593;</span>
-            </button>
+            top<span>&#8593;</span>
           </div>
           <div className="btn-sort" id="badToGood">
-            <button>
-              flop<span>&#8595;</span>
-            </button>
+            flop<span>&#8595;</span>
           </div>
         </div>
       </div>

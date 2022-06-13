@@ -4,9 +4,8 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
-      <h1>The Movie DB</h1>
-      <div className="navigation">
-        <ul className="menu">
+      <nav>
+        <ul>
           <NavLink
             to="/"
             className={(nav) => (nav.isActive ? "nav-active" : "")}
@@ -20,7 +19,8 @@ const Header = () => {
             <li>Mes Coups de coeur</li>
           </NavLink>
         </ul>
-      </div>
+      </nav>
+      <h1>The Movie DB</h1>
     </div>
   );
 };

@@ -77,34 +77,32 @@ const Cards = ({ movie }) => {
   };
 
   return (
-    <div className="card-container">
-      <div className="card">
-        <h2>{movie.original_title}</h2>
-        <img
-          src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
-          alt={"affiche du film :" + movie.title}
-        />
+    <div className="card">
+      <h2>{movie.original_title}</h2>
+      <img
+        src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
+        alt={"affiche du film :" + movie.title}
+      />
 
-        {movie.release_date ? (
-          <p> sortie le : {newDate}</p>
-        ) : (
-          <p>Date de sortie inconnue</p>
-        )}
-        <div className="vote-container">
-          <span>{movie.vote_average}/10 ⭐</span>
-          <ul>
-            {movie.genre_ids
-              ? genreFinder()
-              : movie.genres.map((genre, index) => (
-                  <li key={index}>{genre.name}</li>
-                ))}
-          </ul>
-          {movie.overview ? <h3>Synopsis :</h3> : ""}
-          {movie.overview}
-        </div>
+      {movie.release_date ? (
+        <h5> sortie le : {newDate}</h5>
+      ) : (
+        <h5>Date de sortie inconnue</h5>
+      )}
+      <h4>
+        {movie.vote_average}/10<span>⭐</span>
+      </h4>
+      <ul>
+        {movie.genre_ids
+          ? genreFinder()
+          : movie.genres.map((genre, index) => (
+              <li key={index}>{genre.name}</li>
+            ))}
+      </ul>
+      {movie.overview ? <h3>Synopsis :</h3> : ""}
+      <p>{movie.overview}</p>
 
-        <button className="btn">Ajouter aux coups de coeur &#10084;</button>
-      </div>
+      <button className="btn">Ajouter aux coups de coeur &#10084;</button>
     </div>
   );
 };
